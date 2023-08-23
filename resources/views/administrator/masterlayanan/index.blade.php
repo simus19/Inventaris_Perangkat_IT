@@ -19,7 +19,7 @@
                     </div>
                     <div class="col-6">
                         <div class="text-right">
-                            <a href="{{ url('administrator/masterlayanan/add') }}" class="btn btn-success"></i> <i class="fas fa-user-plus"></i> Tambah Data</a>
+                            <a href="{{ url('administrator/masterlayanan/add') }}" class="btn btn-success"></i> <i class="fa-sharp fa-solid fa-plus"></i> Tambah Data</a>
                         </div>
                     </div>
                   </div>
@@ -36,9 +36,10 @@
                             <th>JenisLayanan</th>
                             <th>Sid</th>
                             <th>Bandwith</th>
-                            <th>ipGetaway</th>
+                            <th>ipGateway</th>
                             <th>Status</th>
                             <th>Koordinat</th>
+                            <th>Keterangan</th>
                             <th>Aksi</th>
                         </tr>
                     </thead>
@@ -52,14 +53,36 @@
                             <th>JenisLayanan</th>
                             <th>Sid</th>
                             <th>Bandwith</th>
-                            <th>ipGetaway</th>
+                            <th>ipGateway</th>
                             <th>Status</th>
                             <th>Koordinat</th>
+                            <th>Keterangan</th>
                             <th>Aksi</th>
                         </tr>
                     </tfoot>
                     <tbody>
-                        
+                        @foreach ($masterlayanans as $data)
+                        <tr>
+                            <td>{{ $data->unitcode }}</td>
+                            <td>{{ $data->busarea }}</td>
+                            <td>{{ $data->namaunit }}</td>
+                            <td>{{ $data->levelunit }}</td>
+                            <td>{{ $data->alamat }}</td>
+                            <td>{{ $data->jenislayanan }}</td>
+                            <td>{{ $data->sid }}</td>
+                            <td>{{ $data->bandwith }}</td>
+                            <td>{{ $data->ipgateway }}</td>
+                            <td>{{ $data->status }}</td>
+                            <td>{{ $data->koordinat }}</td>
+                            <td>{{ $data->keterangan }}</td>
+                            <td>
+                                <div style="display: inline-flex;" class="">
+                                    <a href="" class="btn btn-info btn-sm mr-1"><i class="fas fa-edit"></i></a> 
+                                    <a href="{{ url('/administrator/masterlayanan/del-masterlayanan/'.$data->id) }}" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></a>
+                                </div>
+                            </td>
+                        </tr>
+                        @endforeach
                     </tbody>
                 </table>
             </div>

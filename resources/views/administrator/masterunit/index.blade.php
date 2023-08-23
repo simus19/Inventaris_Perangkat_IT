@@ -19,7 +19,7 @@
                     </div>
                     <div class="col-6">
                         <div class="text-right">
-                            <a href="{{ url('administrator/masterunit/add') }}" class="btn btn-success"></i> <i class="fas fa-user-plus"></i> Tambah Data</a>
+                            <a href="{{ url('administrator/masterunit/add') }}" class="btn btn-success"></i> <i class="fa-sharp fa-solid fa-plus"></i> Tambah Data</a>
                         </div>
                     </div>
                   </div>

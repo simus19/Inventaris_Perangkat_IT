@@ -19,7 +19,7 @@
                     </div>
                     <div class="col-6">
                         <div class="text-right">
-                            <a href="{{ url('administrator/users/add') }}" class="btn btn-success"></i> <i class="fas fa-user-plus"></i> Tambah Data</a>
+                            <a href="{{ url('administrator/dataaplikasi/add') }}" class="btn btn-success"></i> <i class="fa-sharp fa-solid fa-plus"></i> Tambah Data</a>
                         </div>
                     </div>
                   </div>
@@ -53,7 +53,24 @@
                         </tr>
                     </tfoot>
                     <tbody>
-                        
+                        @foreach ($dataaplikasis as $data)
+                        <tr>
+                            <td>{{ $data->ip_aplikasi }}</td>
+                            <td>{{ $data->nama_aplikasi }}</td>
+                            <td>{{ $data->deskripsi }}</td>
+                            <td>{{ $data->tahun_buat }}</td>
+                            <td>{{ $data->bahasaprogram }}</td>
+                            <td>{{ $data->database }}</td>
+                            <td>{{ $data->user }}</td>
+                            <td>{{ $data->status }}</td>
+                            <td>
+                                <div style="display: inline-flex;" class="">
+                                    <a href="" class="btn btn-info btn-sm mr-1"><i class="fas fa-edit"></i></a> 
+                                    <a href="{{ url('/administrator/dataaplikasi/del-dataaplikasi/'.$data->id) }}" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></a>
+                                </div>
+                            </td>
+                        </tr>
+                        @endforeach
                     </tbody>
                 </table>
             </div>

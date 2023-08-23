@@ -19,7 +19,7 @@
                     </div>
                     <div class="col-6">
                         <div class="text-right">
-                            <a href="{{ url('administrator/users/add') }}" class="btn btn-success"></i> <i class="fas fa-user-plus"></i> Tambah Data</a>
+                            <a href="{{ url('administrator/dataserver/add') }}" class="btn btn-success"></i> <i class="fa-sharp fa-solid fa-plus"></i> Tambah Data</a>
                         </div>
                     </div>
                   </div>
@@ -57,7 +57,26 @@
                         </tr>
                     </tfoot>
                     <tbody>
-                        
+                        @foreach ($dataservers as $data)
+                        <tr>
+                            <td>{{ $data->nama }}</td>
+                            <td>{{ $data->alamatip }}</td>
+                            <td>{{ $data->namaserver }}</td>
+                            <td>{{ $data->memori }}</td>
+                            <td>{{ $data->prosesor }}</td>
+                            <td>{{ $data->hardisk }}</td>
+                            <td>{{ $data->statushardisk }}</td>
+                            <td>{{ $data->tanggalupdate }}</td>
+                            <td>{{ $data->fungsiserver }}</td>
+                            <td>{{ $data->keterangan }}</td>
+                            <td>
+                                <div style="display: inline-flex;" class="">
+                                    <a href="" class="btn btn-info btn-sm mr-1"><i class="fas fa-edit"></i></a> 
+                                    <a href="{{ url('/administrator/dataserver/del-dataserver/'.$data->id) }}" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></a>
+                                </div>
+                            </td>
+                        </tr>
+                        @endforeach
                     </tbody>
                 </table>
             </div>

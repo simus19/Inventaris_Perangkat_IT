@@ -19,7 +19,7 @@
                     </div>
                     <div class="col-6">
                         <div class="text-right">
-                            <a href="{{ url('administrator/users/add') }}" class="btn btn-success"></i> <i class="fas fa-user-plus"></i> Tambah Data</a>
+                            <a href="{{ url('administrator/master_perangkat_it/add') }}" class="btn btn-success"></i> <i class="fa-sharp fa-solid fa-plus"></i> Tambah Data</a>
                         </div>
                     </div>
                   </div>
@@ -28,38 +28,28 @@
                 <table class="table table-bordered table-striped" id="dataTableUsers" width="100%" cellspacing="0">
                     <thead>
                         <tr >
-                            <th>Router</th>
-                            <th>Akses Point</th>
-                            <th>Router + Akses Point</th>
-                            <th>Switch</th>
-                            <th>Firewall</th>
-                            <th>ips</th>
-                            <th>ids</th>
-                            <th>Modem</th>
-                            <th>rtu</th>
-                            <th>nic</th>
-                            <th>Wifi Card</th>
+                            <th>Nama Perangkat</th>
                             <th>Aksi</th>
                         </tr>
                     </thead>
                     <tfoot>
                         <tr>
-                            <th>Router</th>
-                            <th>Akses Point</th>
-                            <th>Router + Akses Point</th>
-                            <th>Switch</th>
-                            <th>Firewall</th>
-                            <th>ips</th>
-                            <th>ids</th>
-                            <th>Modem</th>
-                            <th>rtu</th>
-                            <th>nic</th>
-                            <th>Wifi Card</th>
+                            <th>Nama Perangkat</th>
                             <th>Aksi</th>
                         </tr>
                     </tfoot>
                     <tbody>
-                        
+                        @foreach ($master_perangkat_its as $data)
+                        <tr>
+                            <td>{{ $data->nama_perangkat }}</td>
+                            <td>
+                                <div style="display: inline-flex;" class="">
+                                    <a href="" class="btn btn-info btn-sm mr-1"><i class="fas fa-edit"></i></a> 
+                                    <a href="{{ url('/administrator/master_perangkat_it/del-master_perangkat_it/'.$data->id) }}" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></a>
+                                </div>
+                            </td>
+                        </tr>
+                        @endforeach
                     </tbody>
                 </table>
             </div>

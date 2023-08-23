@@ -30,7 +30,7 @@
                     </div>
                     <div class="col-xl-6 col-ms-6 col-sm-6 col-12">
                         <div class="form-group">
-                            <label for="koordinat">koordinat<sup class="text-danger">*</sup></label>
+                            <label for="koordinat">namaunit<sup class="text-danger">*</sup></label>
                             <input class="form-control" type="text" name="namaunit" id="namaunit" value="{{ old('namaunit') }}">
                             <small class="text-danger">{{ $errors->first('namaunit') }}</small>
                         </div>

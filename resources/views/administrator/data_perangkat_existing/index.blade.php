@@ -19,7 +19,7 @@
                     </div>
                     <div class="col-6">
                         <div class="text-right">
-                            <a href="{{ url('administrator/users/add') }}" class="btn btn-success"></i> <i class="fas fa-user-plus"></i> Tambah Data</a>
+                            <a href="{{ url('administrator/data_perangkat_existing/add') }}" class="btn btn-success"></i> <i class="fa-sharp fa-solid fa-plus"></i> Tambah Data</a>
                         </div>
                     </div>
                   </div>
@@ -51,7 +51,23 @@
                         </tr>
                     </tfoot>
                     <tbody>
-                        
+                        @foreach ($data_perangkat_existings as $data)
+                        <tr>
+                            <td>{{ $data->nama_perangkat }}</td>
+                            <td>{{ $data->merk }}</td>
+                            <td>{{ $data->tipe }}</td>
+                            <td>{{ $data->sn }}</td>
+                            <td>{{ $data->tahun_pasangex }}</td>
+                            <td>{{ $data->tahun_bongkar }}</td>
+                            <td>{{ $data->keterangan }}</td>
+                            <td>
+                                <div style="display: inline-flex;" class="">
+                                    <a href="" class="btn btn-info btn-sm mr-1"><i class="fas fa-edit"></i></a> 
+                                    <a href="{{ url('/administrator/data_perangkat_existing/del-data_perangkat_existing/'.$data->id) }}" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></a>
+                                </div>
+                            </td>
+                        </tr>
+                        @endforeach
                     </tbody>
                 </table>
             </div>
