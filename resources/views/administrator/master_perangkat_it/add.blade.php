@@ -16,8 +16,8 @@
                     <div class="col-xl-6 col-ms-6 col-sm-6 col-12">
                         <div class="form-group">
                             <label for="unitcode">Nama Perangkat<sup class="text-danger">*</sup></label>
-                            <input class="form-control" type="text" name="router" id="router" value="{{ old('router') }}">
-                            <small class="text-danger">{{ $errors->first('router') }}</small>
+                            <input class="form-control" type="text" name="nama_perangkat" id="nama_perangkat" value="{{ old('nama_perangkat') }}">
+                            <small class="text-danger">{{ $errors->first('nama_perangkat') }}</small>
                         </div>
                     </div>
 

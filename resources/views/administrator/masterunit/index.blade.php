@@ -59,7 +59,7 @@
                             <td>{{ $data->keterangan }}</td>
                             <td>
                                 <div style="display: inline-flex;" class="">
-                                    <a href="" class="btn btn-info btn-sm mr-1"><i class="fas fa-edit"></i></a> 
+                                    <a href="{{ url('/administrator/masterunit/edit/'.$data->id) }}" class="btn btn-info btn-sm mr-1"><i class="fas fa-edit"></i></a> 
                                     <a href="{{ url('/administrator/masterunit/del-masterunit/'.$data->id) }}" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></a>
                                 </div>
                             </td>

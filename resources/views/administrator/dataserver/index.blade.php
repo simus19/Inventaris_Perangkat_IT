@@ -96,4 +96,32 @@
 } );
 </script>
 
+{{-- <script>
+    //Call the dataTables jQuery plugin
+    $(document).ready(function() {
+      $('#dataTableUsers').DataTable({
+        processing : true,
+        serverSide : true,
+        ajax : {
+          url: "{{ url('administrator/dataserver/table-server') }}",
+        //   type: 'GET'
+        },
+        columns: [
+          {data:'nama',name:'nama'},
+          {data:'alamatip',name:'alamatip'},
+          {data:'namaserver',name:'namaserver'},
+          {data:'memori',name:'memori'},
+          {data:'prosesor',name:'prosesor'},
+          {data:'hardisk',name:'hardisk'},
+          {data:'statushardisk',name:'statushardisk'},
+          {data:'tanggalupdate',name:'tanggalupdate'},
+          {data:'fungsiserver',name:'fungsiserver'},
+          {data:'keterangan',name:'keterangan'},
+          {data:'action',name:'action'},
+        ],
+        order: [[0, 'asc']]
+      });
+    });
+</script> --}}
+
 @endsection

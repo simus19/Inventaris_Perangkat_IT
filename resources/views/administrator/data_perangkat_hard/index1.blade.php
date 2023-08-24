@@ -29,14 +29,20 @@
                     <thead>
                         <tr >
                             <th>Nama Perangkat</th>
-                            <th>Total</th>
+                            <th>Merk</th>
+                            <th>Tipe</th>
+                            <th>Sn</th>
+                            <th>Status</th>
                             <th>Aksi</th>
                         </tr>
                     </thead>
                     <tfoot>
                         <tr >
                             <th>Nama Perangkat</th>
-                            <th>Total</th>
+                            <th>Merk</th>
+                            <th>Tipe</th>
+                            <th>Sn</th>
+                            <th>Status</th>
                             <th>Aksi</th>
                         </tr>
                     </tfoot>
@@ -44,10 +50,14 @@
                         @foreach ($data_perangkat_hars as $data)
                         <tr>
                             <td>{{ $data->nama_perangkat }}</td>
-                            <td>{{ $data->total }}</td>
+                            <td>{{ $data->merk }}</td>
+                            <td>{{ $data->tipe }}</td>
+                            <td>{{ $data->sn }}</td>
+                            <td>{{ $data->status }}</td>
                             <td>
                                 <div style="display: inline-flex;" class="">
-                                    <a href="{{ url("administrator/data_perangkat_hard?nama_perangkat=".$data->nama_perangkat) }}" class="btn btn-info btn-sm mr-1"><i class="fas fa-eye"></i></a> 
+                                    <a href="" class="btn btn-info btn-sm mr-1"><i class="fas fa-edit"></i></a> 
+                                    <a href="{{ url('/administrator/data_perangkat_hard/del-data_perangkat_hard/'.$data->id) }}" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></a>
                                 </div>
                             </td>
                         </tr>

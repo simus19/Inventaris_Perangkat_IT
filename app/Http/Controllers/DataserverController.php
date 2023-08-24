@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use App\Models\Dataserver;
 use Illuminate\Http\Request;
+use Yajra\DataTables\Facades\DataTables;
 
 class DataserverController extends Controller
 {
@@ -53,5 +54,53 @@ class DataserverController extends Controller
     {
         Dataserver::destroy($id);
         return redirect('/administrator/dataserver');
+    }
+
+    public function tableServer(Request $request)
+    {
+        $anggotas = Dataserver::all();
+        // dd($anggotas);
+        // dd(DataTables::of($anggotas));
+        if ($request->ajax()) {
+            return DataTables::of($anggotas)
+                ->addColumn('nama', function ($data) {
+                    return $data->nama;
+                })
+                ->addColumn('alamatip', function ($data) {
+                    return $data->alamatip;
+                })
+                ->addColumn('namaserver', function ($data) {
+                    return $data->namaserver;
+                })
+                ->addColumn('memori', function ($data) {
+                    return $data->memori;
+                })
+                ->addColumn('prosesor', function ($data) {
+                    return $data->prosesor;
+                })
+                ->addColumn('hardisk', function ($data) {
+                    return $data->hardisk;
+                })
+                ->addColumn('statushardisk', function ($data) {
+                    return $data->statushardisk;
+                })
+                ->addColumn('tanggalupdate', function ($data) {
+                    return $data->tanggalupdate;
+                })
+                ->addColumn('fungsiserver', function ($data) {
+                    return $data->fungsiserver;
+                })
+                ->addColumn('keterangan', function ($data) {
+                    return $data->keterangan;
+                })
+                ->addColumn('action', function ($data) {
+                    // return $data->a;
+                    return '<div style="display: inline-flex;" class=""><a href="' . url('') . '/administrator/users/detail/' . $data->id . '" class="btn btn-info btn-sm mr-1"><i class="fas fa-edit"></i></a> <a href="' . url('') . '/administrator/dataserver/del-dataserver/' . $data->id . '" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></a></div>';
+                })
+                ->rawColumns(['action'])
+                ->addIndexColumn()
+                ->make(true);
+        }
+        // return json_encode($anggotas);
     }
 }
