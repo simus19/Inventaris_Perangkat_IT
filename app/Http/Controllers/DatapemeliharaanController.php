@@ -16,7 +16,6 @@ class DatapemeliharaanController extends Controller
 
     function add()
     {
-
         return view('administrator.datapemeliharaan.add');
     }
 
@@ -49,6 +48,38 @@ class DatapemeliharaanController extends Controller
     function delDatapemeliharaan($id)
     {
         Datapemeliharaan::destroy($id);
+        return redirect('/administrator/datapemeliharaan');
+    }
+
+    function edit($id)
+    {
+        $datapemeliharaan = Datapemeliharaan::find($id);
+        return view('administrator.datapemeliharaan.edit', compact('datapemeliharaan'));
+    }
+
+    function update(Request $request, $id)
+    {
+        $request->validate([
+            'perangkat' => 'required|',
+            'merk' => 'required',
+            'tipe' => 'required',
+            'sn' => 'required',
+            'tahun_pasanghar' => 'required',
+            'tgl_kirim' => 'required',
+            'metode' => 'required',
+            'status' => 'required',
+        ]);
+        Datapemeliharaan::find($id)->update([
+            'perangkat' => $request->perangkat,
+            'merk' => $request->merk,
+            'tipe' => $request->tipe,
+            'sn' => $request->sn,
+            'tahun_pasanghar' => $request->tahun_pasanghar,
+            'tgl_kirim' => $request->tgl_kirim,
+            'metode' => $request->metode,
+            'status' => $request->status,
+        ]);
+
         return redirect('/administrator/datapemeliharaan');
     }
 }

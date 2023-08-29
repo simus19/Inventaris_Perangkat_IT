@@ -56,6 +56,42 @@ class DataserverController extends Controller
         return redirect('/administrator/dataserver');
     }
 
+    function edit($id)
+    {
+        $dataserver = Dataserver::find($id);
+        return view('administrator.dataserver.edit', compact('dataserver'));
+    }
+
+    function update(Request $request, $id)
+    {
+        $request->validate([
+            'nama' => 'required|',
+            'alamatip' => 'required',
+            'namaserver' => 'required',
+            'memori' => 'required',
+            'prosesor' => 'required',
+            'hardisk' => 'required',
+            'statushardisk' => 'required',
+            'tanggalupdate' => 'required',
+            'fungsiserver' => 'required',
+            'keterangan' => 'required',
+        ]);
+        Dataserver::find($id)->update([
+            'nama' => $request->nama,
+            'alamatip' => $request->alamatip,
+            'namaserver' => $request->namaserver,
+            'memori' => $request->memori,
+            'prosesor' => $request->prosesor,
+            'hardisk' => $request->hardisk,
+            'statushardisk' => $request->statushardisk,
+            'tanggalupdate' => $request->tanggalupdate,
+            'fungsiserver' => $request->fungsiserver,
+            'keterangan' => $request->keterangan,
+        ]);
+
+        return redirect('/administrator/dataserver');
+    }
+
     public function tableServer(Request $request)
     {
         $anggotas = Dataserver::all();

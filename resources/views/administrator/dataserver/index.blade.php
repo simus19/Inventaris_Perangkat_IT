@@ -9,6 +9,7 @@
 
 @section('content')
 
+@if (Auth::user()->userroles_id == 1)
 <div class="row">
     <div class="col-12">
         <div class="card shadow mb-4">
@@ -71,7 +72,7 @@
                             <td>{{ $data->keterangan }}</td>
                             <td>
                                 <div style="display: inline-flex;" class="">
-                                    <a href="" class="btn btn-info btn-sm mr-1"><i class="fas fa-edit"></i></a> 
+                                    <a href="{{ url('/administrator/dataserver/edit/'.$data->id) }}" class="btn btn-info btn-sm mr-1"><i class="fas fa-edit"></i></a> 
                                     <a href="{{ url('/administrator/dataserver/del-dataserver/'.$data->id) }}" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></a>
                                 </div>
                             </td>
@@ -83,6 +84,69 @@
         </div>
     </div>
 </div>
+@else
+<div class="row">
+    <div class="col-12">
+        <div class="card shadow mb-4">
+            <div class="card-header py-3">
+                <div class="row">
+                    <div class="col-6">
+                        <h6 class="mt-2 font-weight-bold text-success">Data Server</h6>
+                    </div>
+                  </div>
+            </div>
+            <div class="card-body">
+                <table class="table table-bordered table-striped" id="dataTableUsers" width="100%" cellspacing="0">
+                    <thead>
+                        <tr >
+                            <th>Nama</th>
+                            <th>Alamat IP</th>
+                            <th>Nama Server</th>
+                            <th>Memori</th>
+                            <th>Prosesor</th>
+                            <th>Hardisk</th>
+                            <th>Status Hardisk</th>
+                            <th>Tanggal Update</th>
+                            <th>Fungsi Server</th>
+                            <th>Keterangan</th>
+                        </tr>
+                    </thead>
+                    <tfoot>
+                        <tr >
+                            <th>Nama</th>
+                            <th>Alamat IP</th>
+                            <th>Nama Server</th>
+                            <th>Memori</th>
+                            <th>Prosesor</th>
+                            <th>Hardisk</th>
+                            <th>Status Hardisk</th>
+                            <th>Tanggal Update</th>
+                            <th>Fungsi Server</th>
+                            <th>Keterangan</th>
+                        </tr>
+                    </tfoot>
+                    <tbody>
+                        @foreach ($dataservers as $data)
+                        <tr>
+                            <td>{{ $data->nama }}</td>
+                            <td>{{ $data->alamatip }}</td>
+                            <td>{{ $data->namaserver }}</td>
+                            <td>{{ $data->memori }}</td>
+                            <td>{{ $data->prosesor }}</td>
+                            <td>{{ $data->hardisk }}</td>
+                            <td>{{ $data->statushardisk }}</td>
+                            <td>{{ $data->tanggalupdate }}</td>
+                            <td>{{ $data->fungsiserver }}</td>
+                            <td>{{ $data->keterangan }}</td>
+                        </tr>
+                        @endforeach
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+@endif
 
 @endsection
 

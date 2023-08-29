@@ -13,7 +13,7 @@ return new class extends Migration
     {
         Schema::create('data_perangkat_hars', function (Blueprint $table) {
             $table->id();
-            $table->string('nama_perangkat')->length(50);
+            $table->unsignedInteger('master_perangkat_its_id');
             $table->string('merk')->length(50);
             $table->string('tipe')->length(50);
             $table->string('sn')->length(20);

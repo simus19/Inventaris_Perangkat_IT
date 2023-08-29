@@ -58,4 +58,43 @@ class MasterlayananController extends Controller
         Masterlayanan::destroy($id);
         return redirect('/administrator/masterlayanan');
     }
+
+    function edit($id)
+    {
+        $masterlayanan = Masterlayanan::find($id);
+        return view('administrator.masterlayanan.edit', compact('masterlayanan'));
+    }
+
+    function update(Request $request, $id)
+    {
+        $request->validate([
+            'unitcode' => 'required',
+            'busarea' => 'required',
+            'namaunit' => 'required',
+            'levelunit' => 'required',
+            'alamat' => 'required',
+            'jenislayanan' => 'required',
+            'sid' => 'required',
+            'bandwith' => 'required',
+            'ipgateway' => 'required',
+            'status' => 'required',
+            'koordinat' => 'required',
+            'keterangan' => 'required',
+        ]);
+        Masterlayanan::find($id)->update([
+            'unitcode' => $request->unitcode,
+            'busarea' => $request->busarea,
+            'namaunit' => $request->namaunit,
+            'levelunit' => $request->levelunit,
+            'alamat' => $request->alamat,
+            'jenislayanan' => $request->jenislayanan,
+            'sid' => $request->sid,
+            'bandwith' => $request->bandwith,
+            'ipgateway' => $request->ipgateway,
+            'status' => $request->status,
+            'koordinat' => $request->koordinat,
+            'keterangan' => $request->keterangan,
+        ]);
+        return redirect('/administrator/masterlayanan');
+    }
 }

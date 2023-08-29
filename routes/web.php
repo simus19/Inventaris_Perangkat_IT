@@ -10,6 +10,7 @@ use App\Http\Controllers\Master_perangkat_itController;
 use App\Http\Controllers\MasterunitController;
 use App\Http\Controllers\ProfilController;
 use App\Http\Controllers\ProfileController;
+use App\Http\Controllers\UserviewController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -58,4 +59,5 @@ Route::middleware('auth', 'cekRole:Administrator')->group(function () {
 });
 
 Route::middleware('auth', 'cekRole:Operator')->group(function () {
+    Route::auto('/user/', UserviewController::class);
 });

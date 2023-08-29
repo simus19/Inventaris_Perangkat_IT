@@ -164,17 +164,66 @@
           </div>
           <!-- Nav Item -->
           
-          {{-- <li class="nav-item">
-            <a class="nav-link" href="{{ url('/admin/user') }}">
-              <i class="fa-solid fa-user-gear"></i>
-                <span>Biodata</span></a>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url('/user/masterunit') }}">
+              <i class="fa-solid fa-inbox"></i>
+                <span>Master Unit</span></a>
           </li>
           
+
+          
           <li class="nav-item">
-            <a class="nav-link" href="{{ url('/admin/user') }}">
-              <i class="fa-solid fa-user-gear"></i>
-                <span>Ajukan Bebas Pustaka</span></a>
-          </li> --}}
+            <a class="nav-link" href="{{ url('/user/masterlayanan') }}">
+              <i class="fa-solid fa-inbox"></i>
+                <span>Master Layanan</span></a>
+          </li>
+          
+
+
+
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url('/user/master_perangkat_it') }}">
+              <i class="fa-solid fa-inbox"></i>
+                <span>Master Perangkat IT</span></a>
+          </li>
+          
+
+
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url('/user/dataserver') }}">
+              <i class="fa-solid fa-inbox"></i>
+                <span>Data Server</span></a>
+          </li>
+          
+
+
+
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url('/user/dataaplikasi') }}">
+              <i class="fa-solid fa-inbox"></i>
+                <span>Data Aplikasi</span></a>
+          </li>
+          
+
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url('/user/data_perangkat_hard') }}">
+              <i class="fa-solid fa-inbox"></i>
+                <span>Data Perangkat Hard</span></a>
+          </li>
+          
+
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url('/user/data_perangkat_existing') }}">
+              <i class="fa-solid fa-inbox"></i>
+                <span>Data Perangkat Existing</span></a>
+          </li>
+          
+
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url('/user/datapemeliharaan') }}">
+              <i class="fa-solid fa-inbox"></i>
+                <span>Data Pemeliharaan</span></a>
+          </li>
           
 
           <hr class="sidebar-divider d-none d-md-block">

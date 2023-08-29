@@ -36,4 +36,21 @@ class Master_perangkat_itController extends Controller
         Master_perangkat_it::destroy($id);
         return redirect('/administrator/master_perangkat_it');
     }
+
+    function edit($id)
+    {
+        $master_perangkat_it = Master_perangkat_it::find($id);
+        return view('administrator.master_perangkat_it.edit', compact('master_perangkat_it'));
+    }
+    function update(Request $request, $id)
+    {
+        $request->validate([
+            'nama_perangkat' => 'required',
+        ]);
+        Master_perangkat_it::find($id)->update([
+            'nama_perangkat' => $request->nama_perangkat,
+        ]);
+
+        return redirect('/administrator/master_perangkat_it');
+    }
 }

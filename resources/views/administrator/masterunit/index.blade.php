@@ -9,6 +9,7 @@
 
 @section('content')
 
+@if (Auth::user()->userroles_id == 1)
 <div class="row">
     <div class="col-12">
         <div class="card shadow mb-4">
@@ -71,6 +72,57 @@
         </div>
     </div>
 </div>
+@else
+<div class="row">
+    <div class="col-12">
+        <div class="card shadow mb-4">
+            <div class="card-header py-3">
+                <div class="row">
+                    <div class="col-6">
+                        <h6 class="mt-2 font-weight-bold text-success">Data Master Unit</h6>
+                    </div>
+                  </div>
+            </div>
+            <div class="card-body">
+                <table class="table table-bordered table-striped" id="dataTableUsers" width="100%" cellspacing="0">
+                    <thead>
+                        <tr >
+                            <th>UnitCode</th>
+                            <th>Alamat</th>
+                            <th>Busarea</th>
+                            <th>Koordinat</th>
+                            <th>LevelUnit</th>
+                            <th>Keterangan</th>
+                        </tr>
+                    </thead>
+                    <tfoot>
+                        <tr>
+                            <th>UnitCode</th>
+                            <th>Alamat</th>
+                            <th>Busarea</th>
+                            <th>Koordinat</th>
+                            <th>LevelUnit</th>
+                            <th>Keterangan</th>
+                        </tr>
+                    </tfoot>
+                    <tbody>
+                        @foreach ($masterunits as $data)
+                        <tr>
+                            <td>{{ $data->unitcode }}</td>
+                            <td>{{ $data->alamat }}</td>
+                            <td>{{ $data->busarea }}</td>
+                            <td>{{ $data->koodinat }}</td>
+                            <td>{{ $data->levelunit }}</td>
+                            <td>{{ $data->keterangan }}</td>
+                        </tr>
+                        @endforeach
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+@endif
 
 @endsection
 
