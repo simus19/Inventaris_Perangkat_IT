@@ -29,8 +29,8 @@
                 <table class="table table-bordered table-striped" id="dataTableUsers" width="100%" cellspacing="0">
                     <thead>
                         <tr >
-                            <th>UnitCode</th>
-                            <th>Busarea</th>
+                            <th>Kode Unit</th>
+                            <th>Kode BussArea Unit</th>
                             <th>NamaUnit</th>
                             <th>LevelUnit</th>
                             <th>Alamat</th>
@@ -46,8 +46,8 @@
                     </thead>
                     <tfoot>
                         <tr>
-                            <th>UnitCode</th>
-                            <th>Busarea</th>
+                            <th>Kode Unit</th>
+                            <th>Kode BussArea Unit</th>
                             <th>NamaUnit</th>
                             <th>LevelUnit</th>
                             <th>Alamat</th>

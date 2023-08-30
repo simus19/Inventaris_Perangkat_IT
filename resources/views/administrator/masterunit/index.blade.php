@@ -87,9 +87,9 @@
                 <table class="table table-bordered table-striped" id="dataTableUsers" width="100%" cellspacing="0">
                     <thead>
                         <tr >
-                            <th>UnitCode</th>
+                            <th>Kode Unit</th>
                             <th>Alamat</th>
-                            <th>Busarea</th>
+                            <th>Kode BussArea Unit</th>
                             <th>Koordinat</th>
                             <th>LevelUnit</th>
                             <th>Keterangan</th>
@@ -97,9 +97,9 @@
                     </thead>
                     <tfoot>
                         <tr>
-                            <th>UnitCode</th>
+                            <th>Kode Unit</th>
                             <th>Alamat</th>
-                            <th>Busarea</th>
+                            <th>Kode BussArea Unit</th>
                             <th>Koordinat</th>
                             <th>LevelUnit</th>
                             <th>Keterangan</th>
