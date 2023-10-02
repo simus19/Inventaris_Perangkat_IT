@@ -42,7 +42,20 @@
                         </tr>
                     </tfoot>
                     <tbody>
-                        @for ($i = 0; $i < count($fixdata); $i++)
+
+                        @foreach ($data_perangkat_hars as $item)
+                        <tr>
+                            <td>{{ $item->nama_perangkat }}</td>
+                            <td>{{ count($data_perangkat_hars_count->where('master_perangkat_its_id', '=', $item->id)) }}</td>
+                            <td>
+                                <div style="display: inline-flex;" class="">
+                                    <a href="{{ url("administrator/data_perangkat_hard?nama_perangkat=".$item->id) }}" class="btn btn-info btn-sm mr-1"><i class="fas fa-eye"></i></a> 
+                                </div>
+                            </td>
+                        </tr>
+                        @endforeach
+
+                        {{-- @for ($i = 0; $i < count($fixdata); $i++)
                         <tr>
                             <td>{{ $fixdata[$i][1] }}</td>
                             <td>{{ $fixdata[$i][2] }}</td>
@@ -52,7 +65,7 @@
                                 </div>
                             </td>
                         </tr>
-                        @endfor
+                        @endfor --}}
                     </tbody>
                 </table>
             </div>
@@ -92,17 +105,17 @@
                         </tr>
                     </tfoot>
                     <tbody>
-                        @for ($i = 0; $i < count($fixdata); $i++)
+                        @foreach ($data_perangkat_hars as $item)
                         <tr>
-                            <td>{{ $fixdata[$i][1] }}</td>
-                            <td>{{ $fixdata[$i][2] }}</td>
+                            <td>{{ $item->nama_perangkat }}</td>
+                            <td>{{ count($data_perangkat_hars_count->where('master_perangkat_its_id', '=', $item->id)) }}</td>
                             <td>
                                 <div style="display: inline-flex;" class="">
-                                    <a href="{{ url("user/data_perangkat_hard?nama_perangkat=".$fixdata[$i][0]) }}" class="btn btn-info btn-sm mr-1"><i class="fas fa-eye"></i></a> 
+                                    <a href="{{ url("administrator/data_perangkat_hard?nama_perangkat=".$item->id) }}" class="btn btn-info btn-sm mr-1"><i class="fas fa-eye"></i></a> 
                                 </div>
                             </td>
                         </tr>
-                        @endfor
+                        @endforeach
                     </tbody>
                 </table>
             </div>

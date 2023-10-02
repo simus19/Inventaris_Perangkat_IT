@@ -18,6 +18,8 @@ return new class extends Migration
             $table->string('tipe')->length(50);
             $table->string('sn')->length(20);
             $table->string('status')->length(50);
+            $table->string('alamat')->length(50);
+            $table->string('nomor_referensi')->length(20);
             $table->timestamps();
         });
     }

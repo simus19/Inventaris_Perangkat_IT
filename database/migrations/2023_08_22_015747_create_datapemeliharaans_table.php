@@ -14,13 +14,14 @@ return new class extends Migration
         Schema::create('datapemeliharaans', function (Blueprint $table) {
             $table->id();
             $table->string('perangkat')->length(50);
-            $table->string('merk')->length(50);
-            $table->string('tipe')->length(50);
-            $table->integer('sn')->length(20);
-            $table->string('tahun_pasanghar')->length(50);
-            $table->string('tgl_kirim')->length(50);
-            $table->string('metode')->length(50);
-            $table->string('status')->length(50);
+            $table->string('jenis_kegiatan')->length(50);
+            $table->date('tgl_mulai')->length();
+            $table->date('tgl_selesai')->length();
+            $table->string('waktu')->length(50);
+            $table->string('pelaksana')->length(50);
+            $table->string('lokasi')->length(50);
+            $table->string('evidence')->length(50);
+            $table->string('kebutuhan_item')->length(50);
             $table->timestamps();
         });
     }

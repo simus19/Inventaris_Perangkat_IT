@@ -42,7 +42,7 @@
                     </div>
                     <div class="col-xl-6 col-ms-6 col-sm-6 col-12">
                         <div class="form-group">
-                            <label for="levelunit">Sn<sup class="text-danger">*</sup></label>
+                            <label for="levelunit">Sn</sup></label>
                             <input class="form-control" type="text" name="sn" id="sn" value="{{ old('sn') }}">
                             <small class="text-danger">{{ $errors->first('sn') }}</small>
                         </div>
@@ -52,6 +52,20 @@
                             <label for="levelunit">Status<sup class="text-danger">*</sup></label>
                             <input class="form-control" type="text" name="status" id="status" value="{{ old('status') }}">
                             <small class="text-danger">{{ $errors->first('status') }}</small>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-ms-6 col-sm-6 col-12">
+                        <div class="form-group">
+                            <label for="levelunit">Alamat</sup></label>
+                            <input class="form-control" type="text" name="Alamat" id="Alamat" value="{{ old('Alamat') }}">
+                            <small class="text-danger">{{ $errors->first('Alamat') }}</small>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-ms-6 col-sm-6 col-12">
+                        <div class="form-group">
+                            <label for="levelunit">Nomor Referensi</sup></label>
+                            <input class="form-control" type="text" name="Nomor Referensi" id="Nomor Referensi" value="{{ old('Nomor Referensi') }}">
+                            <small class="text-danger">{{ $errors->first('Nomor Referensi') }}</small>
                         </div>
                     </div>
 

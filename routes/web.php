@@ -1,7 +1,7 @@
 <?php
 
 use App\Http\Controllers\Administrator\UsersController;
-use App\Http\Controllers\Data_perangkat_existingController;
+// use App\Http\Controllers\Data_perangkat_existingController;
 use App\Http\Controllers\Data_perangkat_hardController;
 use App\Http\Controllers\DataaplikasiController;
 use App\Http\Controllers\DatapemeliharaanController;
@@ -54,7 +54,7 @@ Route::middleware('auth', 'cekRole:Administrator')->group(function () {
     Route::auto('/administrator/dataserver', DataserverController::class);
     Route::auto('/administrator/dataaplikasi', DataaplikasiController::class);
     Route::auto('/administrator/data_perangkat_hard', Data_perangkat_hardController::class);
-    Route::auto('/administrator/data_perangkat_existing', Data_perangkat_existingController::class);
+    // Route::auto('/administrator/data_perangkat_existing', Data_perangkat_existingController::class);
     Route::auto('/administrator/datapemeliharaan', DatapemeliharaanController::class);
 });
 

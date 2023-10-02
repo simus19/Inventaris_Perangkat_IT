@@ -29,22 +29,22 @@
                 <table class="table table-bordered table-striped" id="dataTableUsers" width="100%" cellspacing="0">
                     <thead>
                         <tr >
-                            <th>UnitCode</th>
+                            <th>Kode Unit</th>
                             <th>Alamat</th>
-                            <th>Busarea</th>
+                            <th>Kode BussArea Unit</th>
                             <th>Koordinat</th>
-                            <th>LevelUnit</th>
+                            <th>Level Unit</th>
                             <th>Keterangan</th>
                             <th>Aksi</th>
                         </tr>
                     </thead>
                     <tfoot>
                         <tr>
-                            <th>UnitCode</th>
+                            <th>Kode Unit</th>
                             <th>Alamat</th>
-                            <th>Busarea</th>
+                            <th>Kode BussArea Unit</th>
                             <th>Koordinat</th>
-                            <th>LevelUnit</th>
+                            <th>Level Unit</th>
                             <th>Keterangan</th>
                             <th>Aksi</th>
                         </tr>
@@ -91,7 +91,7 @@
                             <th>Alamat</th>
                             <th>Kode BussArea Unit</th>
                             <th>Koordinat</th>
-                            <th>LevelUnit</th>
+                            <th>Level Unit</th>
                             <th>Keterangan</th>
                         </tr>
                     </thead>
@@ -101,7 +101,7 @@
                             <th>Alamat</th>
                             <th>Kode BussArea Unit</th>
                             <th>Koordinat</th>
-                            <th>LevelUnit</th>
+                            <th>Level Unit</th>
                             <th>Keterangan</th>
                         </tr>
                     </tfoot>

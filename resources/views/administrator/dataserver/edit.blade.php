@@ -86,7 +86,7 @@
                     </div>
 
                 </div>
-                <button type="submit" class="btn btn-warning">Tambah</button>
+                <button type="submit" class="btn btn-warning">Update</button>
                 </form>
             </div>
         </div>

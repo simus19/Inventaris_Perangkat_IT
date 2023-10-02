@@ -32,7 +32,7 @@
                             <th>Kode Unit</th>
                             <th>Kode BussArea Unit</th>
                             <th>NamaUnit</th>
-                            <th>LevelUnit</th>
+                            <th>Level Unit</th>
                             <th>Alamat</th>
                             <th>JenisLayanan</th>
                             <th>Sid</th>
@@ -49,7 +49,7 @@
                             <th>Kode Unit</th>
                             <th>Kode BussArea Unit</th>
                             <th>NamaUnit</th>
-                            <th>LevelUnit</th>
+                            <th>Level Unit</th>
                             <th>Alamat</th>
                             <th>JenisLayanan</th>
                             <th>Sid</th>
@@ -105,10 +105,10 @@
                 <table class="table table-bordered table-striped" id="dataTableUsers" width="100%" cellspacing="0">
                     <thead>
                         <tr >
-                            <th>UnitCode</th>
-                            <th>Busarea</th>
+                            <th>Kode Unit</th>
+                            <th>Kode BussArea Unit</th>
                             <th>NamaUnit</th>
-                            <th>LevelUnit</th>
+                            <th>Level Unit</th>
                             <th>Alamat</th>
                             <th>JenisLayanan</th>
                             <th>Sid</th>
@@ -121,10 +121,10 @@
                     </thead>
                     <tfoot>
                         <tr>
-                            <th>UnitCode</th>
-                            <th>Busarea</th>
+                            <th>Kode Unit</th>
+                            <th>Kode BussArea Unit</th>
                             <th>NamaUnit</th>
-                            <th>LevelUnit</th>
+                            <th>Level Unit</th>
                             <th>Alamat</th>
                             <th>JenisLayanan</th>
                             <th>Sid</th>

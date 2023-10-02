@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Controllers\Controller;
 use App\Models\Datapemeliharaan;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
 
 class DatapemeliharaanController extends Controller
 {
@@ -23,23 +24,27 @@ class DatapemeliharaanController extends Controller
     {
         $request->validate([
             'perangkat' => 'required|',
-            'merk' => 'required',
-            'tipe' => 'required',
-            'sn' => 'required',
-            'tahun_pasanghar' => 'required',
-            'tgl_kirim' => 'required',
-            'metode' => 'required',
-            'status' => 'required',
+            'jenis_kegiatan' => 'required',
+            'tgl_mulai' => 'required',
+            'tgl_selesai' => 'required',
+            'pelaksana' => 'required',
+            'lokasi' => 'required',
+            'evidence' => 'required|mimes:jpeg,jpg,png',
+            'kebutuhan_item' => 'required',
         ]);
+        $file = $request->file('evidence');
+        $imgData = Str::random(45) . '.' . $file->getClientOriginalExtension();
+        $file->move(public_path() . '/uploads/', $imgData);
         Datapemeliharaan::create([
             'perangkat' => $request->perangkat,
-            'merk' => $request->merk,
-            'tipe' => $request->tipe,
-            'sn' => $request->sn,
-            'tahun_pasanghar' => $request->tahun_pasanghar,
-            'tgl_kirim' => $request->tgl_kirim,
-            'metode' => $request->metode,
-            'status' => $request->status,
+            'jenis_kegiatan' => $request->jenis_kegiatan,
+            'tgl_mulai' => $request->tgl_mulai,
+            'tgl_selesai' => $request->tgl_selesai,
+            'waktu' => $request->waktu == null ? "" : $request->waktu,
+            'pelaksana' => $request->pelaksana,
+            'lokasi' => $request->lokasi,
+            'evidence' => $imgData,
+            'kebutuhan_item' => $request->kebutuhan_item,
         ]);
 
         return redirect('/administrator/datapemeliharaan');
@@ -61,23 +66,31 @@ class DatapemeliharaanController extends Controller
     {
         $request->validate([
             'perangkat' => 'required|',
-            'merk' => 'required',
-            'tipe' => 'required',
-            'sn' => 'required',
-            'tahun_pasanghar' => 'required',
-            'tgl_kirim' => 'required',
-            'metode' => 'required',
-            'status' => 'required',
+            'jenis_kegiatan' => 'required',
+            'tgl_mulai' => 'required',
+            'tgl_selesai' => 'required',
+            'pelaksana' => 'required',
+            'lokasi' => 'required',
+            'evidence.*' => 'mimes:jpeg,jpg,png',
+            'kebutuhan_item' => 'required',
         ]);
+        if ($request->file('evidence') == null) {
+            $imgData = $request->oldevidence;
+        } else {
+            $file = $request->file('evidence');
+            $imgData = Str::random(45) . '.' . $file->getClientOriginalExtension();
+            $file->move(public_path() . '/uploads/', $imgData);
+        }
         Datapemeliharaan::find($id)->update([
             'perangkat' => $request->perangkat,
-            'merk' => $request->merk,
-            'tipe' => $request->tipe,
-            'sn' => $request->sn,
-            'tahun_pasanghar' => $request->tahun_pasanghar,
-            'tgl_kirim' => $request->tgl_kirim,
-            'metode' => $request->metode,
-            'status' => $request->status,
+            'jenis_kegiatan' => $request->jenis_kegiatan,
+            'tgl_mulai' => $request->tgl_mulai,
+            'tgl_selesai' => $request->tgl_selesai,
+            'waktu' => $request->waktu == null ? "" : $request->waktu,
+            'pelaksana' => $request->pelaksana,
+            'lokasi' => $request->lokasi,
+            'evidence' => $imgData,
+            'kebutuhan_item' => $request->kebutuhan_item,
         ]);
 
         return redirect('/administrator/datapemeliharaan');

@@ -30,44 +30,46 @@
                     <thead>
                         <tr >
                             <th>Perangkat</th>
-                            <th>Merk</th>
-                            <th>Tipe</th>
-                            <th>Sn</th>
-                            <th>Tahun Pasang Har</th>
-                            <th>Tgl Kirim</th>
-                            <th>Metode</th>
-                            <th>Status</th>
+                            <th>Jenis Kegiatan</th>
+                            <th>Tanggal Mulai</th>
+                            <th>Tanggal Selesai</th>
+                            <th>Waktu</th>
+                            <th>Pelaksana</th>
+                            <th>Lokasi</th>
+                            <th>Evidence</th>
+                            <th>Kebutuhan Item</th>
                             <th>Aksi</th>
                         </tr>
                     </thead>
                     <tfoot>
                         <tr>
                             <th>Perangkat</th>
-                            <th>Merk</th>
-                            <th>Tipe</th>
-                            <th>Sn</th>
-                            <th>Tahun Pasang Har</th>
-                            <th>Tgl Kirim</th>
-                            <th>Metode</th>
-                            <th>Status</th>
+                            <th>Jenis Kegiatan</th>
+                            <th>Tanggal Mulai</th>
+                            <th>Tanggal Selesai</th>
+                            <th>Waktu</th>
+                            <th>Pelaksana</th>
+                            <th>Lokasi</th>
+                            <th>Evidence</th>
+                            <th>Kebutuhan Item</th>
                             <th>Aksi</th>
-                        </tr>
                     </tfoot>
                     <tbody>
                         @foreach ($datapemeliharaans as $data)
                         <tr>
                             <td>{{ $data->perangkat }}</td>
-                            <td>{{ $data->merk }}</td>
-                            <td>{{ $data->tipe }}</td>
-                            <td>{{ $data->sn }}</td>
-                            <td>{{ $data->tahun_pasanghar }}</td>
-                            <td>{{ $data->tgl_kirim }}</td>
-                            <td>{{ $data->metode }}</td>
-                            <td>{{ $data->status }}</td>
+                            <td>{{ $data->jenis_kegiatan }}</td>
+                            <td>{{ $data->tgl_mulai }}</td>
+                            <td>{{ $data->tgl_selesai }}</td>
+                            <td>{{ $data->waktu }}</td>
+                            <td>{{ $data->pelaksana }}</td>
+                            <td>{{ $data->lokasi }}</td>
+                            <td><img src="{{ url('public/uploads/'.$data->evidence) }}" alt="" class="img-fluid"></td>
+                            <td>{{ $data->kebutuhan_item }}</td>
                             <td>
                                 <div style="display: inline-flex;" class="">
                                     <a href="{{ url('/administrator/datapemeliharaan/edit/'.$data->id) }}" class="btn btn-info btn-sm mr-1"><i class="fas fa-edit"></i></a> 
-                                    <a href="{{ url('/administrator/datapemeliharaan/del-data/'.$data->id) }}" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></a>
+                                    <a href="{{ url('/administrator/datapemeliharaan/del-datapemeliharaan/'.$data->id) }}" class="btn btn-danger btn-sm"><i class="fas fa-trash"></i></a>
                                 </div>
                             </td>
                         </tr>
@@ -94,39 +96,41 @@
                     <thead>
                         <tr >
                             <th>Perangkat</th>
-                            <th>Merk</th>
-                            <th>Tipe</th>
-                            <th>Sn</th>
-                            <th>Tahun Pasang Har</th>
-                            <th>Tgl Kirim</th>
-                            <th>Metode</th>
-                            <th>Status</th>
+                            <th>Jenis Kegiatan</th>
+                            <th>Tanggal Mulai</th>
+                            <th>Tanggal Selesai</th>
+                            <th>Waktu</th>
+                            <th>Pelaksana</th>
+                            <th>Lokasi</th>
+                            <th>Evidence</th>
+                            <th>Kebutuhan Item</th>
                         </tr>
                     </thead>
                     <tfoot>
                         <tr>
                             <th>Perangkat</th>
-                            <th>Merk</th>
-                            <th>Tipe</th>
-                            <th>Sn</th>
-                            <th>Tahun Pasang Har</th>
-                            <th>Tgl Kirim</th>
-                            <th>Metode</th>
-                            <th>Status</th>
-                        </tr>
+                            <th>Jenis Kegiatan</th>
+                            <th>Tanggal Mulai</th>
+                            <th>Tanggal Selesai</th>
+                            <th>Waktu</th>
+                            <th>Pelaksana</th>
+                            <th>Lokasi</th>
+                            <th>Evidence</th>
+                            <th>Kebutuhan Item</th>
                     </tfoot>
                     <tbody>
                         @foreach ($datapemeliharaans as $data)
                         <tr>
                             <td>{{ $data->perangkat }}</td>
-                            <td>{{ $data->merk }}</td>
-                            <td>{{ $data->tipe }}</td>
-                            <td>{{ $data->sn }}</td>
-                            <td>{{ $data->tahun_pasanghar }}</td>
-                            <td>{{ $data->tgl_kirim }}</td>
-                            <td>{{ $data->metode }}</td>
-                            <td>{{ $data->status }}</td>
-                            </td>
+                            <td>{{ $data->jenis_kegiatan }}</td>
+                            <td>{{ $data->tgl_mulai }}</td>
+                            <td>{{ $data->tgl_selesai }}</td>
+                            <td>{{ $data->waktu }}</td>
+                            <td>{{ $data->pelaksana }}</td>
+                            <td>{{ $data->lokasi }}</td>
+                            <td><img src="{{ url('public/uploads/'.$data->evidence) }}" alt="" class="img-fluid"></td>
+                            <td>{{ $data->kebutuhan_item }}</td>
+                            <td>
                         </tr>
                         @endforeach
                     </tbody>

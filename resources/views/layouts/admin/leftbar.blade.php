@@ -75,9 +75,6 @@
               <i class="fa-solid fa-inbox"></i>
                 <span>Data Server</span></a>
           </li>
-          
-
-
 
           <li class="nav-item">
             <a class="nav-link" href="{{ url('/administrator/dataaplikasi') }}">
@@ -91,20 +88,25 @@
               <i class="fa-solid fa-inbox"></i>
                 <span>Data Perangkat Hard</span></a>
           </li>
-          
-
-          <li class="nav-item">
-            <a class="nav-link" href="{{ url('/administrator/data_perangkat_existing') }}">
-              <i class="fa-solid fa-inbox"></i>
-                <span>Data Perangkat Existing</span></a>
-          </li>
-          
 
           <li class="nav-item">
             <a class="nav-link" href="{{ url('/administrator/datapemeliharaan') }}">
               <i class="fa-solid fa-inbox"></i>
                 <span>Data Pemeliharaan</span></a>
           </li>
+
+        {{-- <hr class="sidebar-divider d-none d-md-block">
+         
+          <div class="sidebar-heading">
+            Menu
+          </div>
+          <!-- Nav Item -->
+          
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url('/administrator/masterunit') }}">
+              <i class="fa-solid fa-inbox"></i>
+                <span>Master Unit</span></a>
+          </li> --}}
 
     <!-- Divider -->
     {{-- <hr class="sidebar-divider d-none d-md-block"> --}}
@@ -210,14 +212,6 @@
               <i class="fa-solid fa-inbox"></i>
                 <span>Data Perangkat Hard</span></a>
           </li>
-          
-
-          <li class="nav-item">
-            <a class="nav-link" href="{{ url('/user/data_perangkat_existing') }}">
-              <i class="fa-solid fa-inbox"></i>
-                <span>Data Perangkat Existing</span></a>
-          </li>
-          
 
           <li class="nav-item">
             <a class="nav-link" href="{{ url('/user/datapemeliharaan') }}">

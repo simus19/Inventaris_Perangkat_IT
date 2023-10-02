@@ -46,12 +46,6 @@ class UserviewController extends Controller
         return view('administrator.dataaplikasi.index', compact('dataaplikasis'));
     }
 
-    function data_perangkat_existing()
-    {
-        $data_perangkat_existings = Data_perangkat_existing::all();
-        return view('administrator.data_perangkat_existing.index', compact('data_perangkat_existings'));
-    }
-
     function datapemeliharaan()
     {
         $datapemeliharaans = Datapemeliharaan::all();
@@ -62,27 +56,32 @@ class UserviewController extends Controller
     {
         // dd($request->all());
         if ($request->nama_perangkat == []) {
-            $data_perangkat_hars_count = Data_perangkat_har::select('master_perangkat_its_id', DB::raw('count(*) as total'))
-                ->groupBy('master_perangkat_its_id')
-                ->get();
+            $data_perangkat_hars_count = Data_perangkat_har::all();
+
+            // dd($data_perangkat_hars_count);
 
             $data_perangkat_hars = Master_perangkat_it::all();
-
-            $fixdata = [];
-
-            foreach ($data_perangkat_hars as $data) {
-                foreach ($data_perangkat_hars_count as $data2) {
-                    if ($data->id == $data2->master_perangkat_its_id) {
-                        $fixdata[] = array($data->id, $data->nama_perangkat, $data2->total);
-                    } else {
-                        $fixdata[] = array($data->id, $data->nama_perangkat, 0);
-                    }
-                }
-            }
-            // dd($fixdata);
-
             // dd($data_perangkat_hars);
-            return view('administrator.data_perangkat_hard.index', compact('fixdata'));
+
+            // $fixdata = [];
+
+            // if (count($data_perangkat_hars_count) == 0) {
+            //     foreach ($data_perangkat_hars as $data) {
+            //         $fixdata[] = array($data->id, $data->nama_perangkat, 0);
+            //     }
+            // } else {
+            //     foreach ($data_perangkat_hars as $data) {
+            //         foreach ($data_perangkat_hars_count as $data2) {
+            //             if ($data->id == $data2->master_perangkat_its_id) {
+            //                 $fixdata[] = array($data->id, $data->nama_perangkat, $data2->total);
+            //             } else {
+            //                 $fixdata[] = array($data->id, $data->nama_perangkat, 0);
+            //             }
+            //         }
+            //     }
+            // }
+            // dd($fixdata);
+            return view('administrator.data_perangkat_hard.index', compact('data_perangkat_hars_count', 'data_perangkat_hars') /* compact('fixdata') */);
         } else {
             $data_perangkat_hars = Data_perangkat_har::where('master_perangkat_its_id', '=', $request->nama_perangkat)->get();
             // dd($data_perangkat_hars);

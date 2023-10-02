@@ -34,6 +34,8 @@
                             <th>Tipe</th>
                             <th>Sn</th>
                             <th>Status</th>
+                            <th>Alamat</th>
+                            <th>Nomor Referensi</th>
                             <th>Aksi</th>
                         </tr>
                     </thead>
@@ -44,6 +46,8 @@
                             <th>Tipe</th>
                             <th>Sn</th>
                             <th>Status</th>
+                            <th>Alamat</th>
+                            <th>Nomor Referensi</th>
                             <th>Aksi</th>
                         </tr>
                     </tfoot>
@@ -55,6 +59,8 @@
                             <td>{{ $data->tipe }}</td>
                             <td>{{ $data->sn }}</td>
                             <td>{{ $data->status }}</td>
+                            <td>{{ $data->alamat }}</td>
+                            <td>{{ $data->nomor_referensi }}</td>
                             <td>
                                 <div style="display: inline-flex;" class="">
                                     <a href="{{ url('/administrator/data_perangkat_hard/edit/'.$data->id) }}" class="btn btn-info btn-sm mr-1"><i class="fas fa-edit"></i></a> 
@@ -89,6 +95,8 @@
                             <th>Tipe</th>
                             <th>Sn</th>
                             <th>Status</th>
+                            <th>Alamat</th>
+                            <th>Nomor Referensi</th>
                         </tr>
                     </thead>
                     <tfoot>
@@ -98,6 +106,8 @@
                             <th>Tipe</th>
                             <th>Sn</th>
                             <th>Status</th>
+                            <th>Alamat</th>
+                            <th>Nomor Referensi</th>
                         </tr>
                     </tfoot>
                     <tbody>
@@ -108,6 +118,8 @@
                             <td>{{ $data->tipe }}</td>
                             <td>{{ $data->sn }}</td>
                             <td>{{ $data->status }}</td>
+                            <td>{{ $data->alamat }}</td>
+                            <td>{{ $data->nomor_referensi }}</td>
                         </tr>
                         @endforeach
                     </tbody>
