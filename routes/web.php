@@ -1,13 +1,20 @@
 <?php
 
 use App\Http\Controllers\Administrator\UsersController;
+use App\Http\Controllers\BireunController;
+use App\Http\Controllers\BlangkejerenController;
 // use App\Http\Controllers\Data_perangkat_existingController;
 use App\Http\Controllers\Data_perangkat_hardController;
 use App\Http\Controllers\DataaplikasiController;
 use App\Http\Controllers\DatapemeliharaanController;
 use App\Http\Controllers\DataserverController;
+use App\Http\Controllers\GandapuraController;
+use App\Http\Controllers\KutacaneController;
+use App\Http\Controllers\LangsaController;
+use App\Http\Controllers\LhokseumaweController;
 use App\Http\Controllers\Master_perangkat_itController;
 use App\Http\Controllers\MasterunitController;
+use App\Http\Controllers\Panton_labuController;
 use App\Http\Controllers\ProfilController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\UserviewController;
@@ -54,8 +61,14 @@ Route::middleware('auth', 'cekRole:Administrator')->group(function () {
     Route::auto('/administrator/dataserver', DataserverController::class);
     Route::auto('/administrator/dataaplikasi', DataaplikasiController::class);
     Route::auto('/administrator/data_perangkat_hard', Data_perangkat_hardController::class);
-    // Route::auto('/administrator/data_perangkat_existing', Data_perangkat_existingController::class);
     Route::auto('/administrator/datapemeliharaan', DatapemeliharaanController::class);
+    Route::auto('/administrator/lhokseumawe', LhokseumaweController::class);
+    Route::auto('/administrator/bireun', BireunController::class);
+    Route::auto('/administrator/gandapura', GandapuraController::class);
+    Route::auto('/administrator/panton_labu', Panton_labuController::class);
+    Route::auto('/administrator/langsa', LangsaController::class);
+    Route::auto('/administrator/kutacane', KutacaneController::class);
+    Route::auto('/administrator/blangkejeren', BlangkejerenController::class);
 });
 
 Route::middleware('auth', 'cekRole:Operator')->group(function () {

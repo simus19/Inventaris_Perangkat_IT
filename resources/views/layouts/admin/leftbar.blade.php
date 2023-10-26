@@ -51,25 +51,18 @@
                 <span>Master Unit</span></a>
           </li>
           
-
-          
           <li class="nav-item">
             <a class="nav-link" href="{{ url('/administrator/masterlayanan') }}">
               <i class="fa-solid fa-inbox"></i>
                 <span>Master Layanan</span></a>
           </li>
           
-
-
-
           <li class="nav-item">
             <a class="nav-link" href="{{ url('/administrator/master_perangkat_it') }}">
               <i class="fa-solid fa-inbox"></i>
                 <span>Master Perangkat IT</span></a>
           </li>
           
-
-
           <li class="nav-item">
             <a class="nav-link" href="{{ url('/administrator/dataserver') }}">
               <i class="fa-solid fa-inbox"></i>
@@ -94,6 +87,59 @@
               <i class="fa-solid fa-inbox"></i>
                 <span>Data Pemeliharaan</span></a>
           </li>
+
+
+        {{-- daftar perangkat radio --}}
+        <hr class="sidebar-divider d-none d-md-block">
+         
+          <div class="sidebar-heading">
+            DAFTAR PERANGKAT RADIO
+          </div>
+          <!-- Nav Item -->
+          
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url('/administrator/lhokseumawe') }}">
+              <i class="fa-solid fa-inbox"></i>
+                <span>Lhokseumawe</span></a>
+          </li>
+          
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url('/administrator/bireun') }}">
+              <i class="fa-solid fa-inbox"></i>
+                <span>Bireun</span></a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url('/administrator/gandapura') }}">
+              <i class="fa-solid fa-inbox"></i>
+                <span>Gandapura</span></a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url('/administrator/panton_labu') }}">
+              <i class="fa-solid fa-inbox"></i>
+                <span>Panton Labu</span></a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url('/administrator/langsa') }}">
+              <i class="fa-solid fa-inbox"></i>
+                <span>Langsa</span></a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url('/administrator/kutacane') }}">
+              <i class="fa-solid fa-inbox"></i>
+                <span>Kutacane</span></a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" href="{{ url('/administrator/blangkejeren') }}">
+              <i class="fa-solid fa-inbox"></i>
+                <span>Blangkejeren</span></a>
+          </li>
+
+        {{-- <hr class="sidebar-divider d-none d-md-block">
 
         {{-- <hr class="sidebar-divider d-none d-md-block">
          
@@ -171,42 +217,31 @@
               <i class="fa-solid fa-inbox"></i>
                 <span>Master Unit</span></a>
           </li>
-          
-
-          
+      
           <li class="nav-item">
             <a class="nav-link" href="{{ url('/user/masterlayanan') }}">
               <i class="fa-solid fa-inbox"></i>
                 <span>Master Layanan</span></a>
           </li>
           
-
-
-
           <li class="nav-item">
             <a class="nav-link" href="{{ url('/user/master_perangkat_it') }}">
               <i class="fa-solid fa-inbox"></i>
                 <span>Master Perangkat IT</span></a>
           </li>
           
-
-
           <li class="nav-item">
             <a class="nav-link" href="{{ url('/user/dataserver') }}">
               <i class="fa-solid fa-inbox"></i>
                 <span>Data Server</span></a>
           </li>
           
-
-
-
           <li class="nav-item">
             <a class="nav-link" href="{{ url('/user/dataaplikasi') }}">
               <i class="fa-solid fa-inbox"></i>
                 <span>Data Aplikasi</span></a>
           </li>
           
-
           <li class="nav-item">
             <a class="nav-link" href="{{ url('/user/data_perangkat_hard') }}">
               <i class="fa-solid fa-inbox"></i>

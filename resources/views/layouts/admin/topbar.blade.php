@@ -9,7 +9,7 @@
 
     <!-- Nav Item - Search Dropdown (Visible Only XS) -->
     <div class="d-none d-sm-inline-block form-inline mr-auto mt-1">
-      <h4 class="text-dark font-weight-bold" style="font-family: 'Times New Roman', Times, serif">INVENTARIS PERANGKAT IT - PLN UIW ACEH</h4>
+      <h4 class="text-dark font-weight-bold" style="font-family: 'Times New Roman', Times, serif">INVENTARIS PERANGKAT IT - PT PLN UID ACEH</h4>
     </div>
     <!-- Topbar Navbar -->
     <ul class="navbar-nav ml-auto">
