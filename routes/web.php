@@ -3,7 +3,6 @@
 use App\Http\Controllers\Administrator\UsersController;
 use App\Http\Controllers\BireunController;
 use App\Http\Controllers\BlangkejerenController;
-// use App\Http\Controllers\Data_perangkat_existingController;
 use App\Http\Controllers\Data_perangkat_hardController;
 use App\Http\Controllers\DataaplikasiController;
 use App\Http\Controllers\DatapemeliharaanController;

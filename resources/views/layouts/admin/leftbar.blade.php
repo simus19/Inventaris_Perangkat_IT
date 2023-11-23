@@ -255,7 +255,55 @@
           </li>
           
 
-          <hr class="sidebar-divider d-none d-md-block">
+          {{-- daftar perangkat radio --}}
+        <hr class="sidebar-divider d-none d-md-block">
+         
+        <div class="sidebar-heading">
+          DAFTAR PERANGKAT RADIO
+        </div>
+        <!-- Nav Item -->
+        
+        <li class="nav-item">
+          <a class="nav-link" href="{{ url('/user/lhokseumawe') }}">
+            <i class="fa-solid fa-inbox"></i>
+              <span>Lhokseumawe</span></a>
+        </li>
+        
+        <li class="nav-item">
+          <a class="nav-link" href="{{ url('/user/bireun') }}">
+            <i class="fa-solid fa-inbox"></i>
+              <span>Bireun</span></a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="{{ url('/user/gandapura') }}">
+            <i class="fa-solid fa-inbox"></i>
+              <span>Gandapura</span></a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="{{ url('/user/panton_labu') }}">
+            <i class="fa-solid fa-inbox"></i>
+              <span>Panton Labu</span></a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="{{ url('/user/langsa') }}">
+            <i class="fa-solid fa-inbox"></i>
+              <span>Langsa</span></a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="{{ url('/user/kutacane') }}">
+            <i class="fa-solid fa-inbox"></i>
+              <span>Kutacane</span></a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="{{ url('/user/blangkejeren') }}">
+            <i class="fa-solid fa-inbox"></i>
+              <span>Blangkejeren</span></a>
+        </li>
           
 
     <!-- Divider -->
