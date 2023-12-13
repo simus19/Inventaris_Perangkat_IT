@@ -71,5 +71,12 @@ Route::middleware('auth', 'cekRole:Administrator')->group(function () {
 });
 
 Route::middleware('auth', 'cekRole:Operator')->group(function () {
-    Route::auto('/user/', UserviewController::class);
+    Route::auto('/user', UserviewController::class);
+    Route::auto('/user/lhokseumawe', LhokseumaweController::class);
+    Route::auto('/user/bireun', BireunController::class);
+    Route::auto('/user/gandapura', GandapuraController::class);
+    Route::auto('/user/panton_labu', Panton_labuController::class);
+    Route::auto('/user/langsa', LangsaController::class);
+    Route::auto('/user/kutacane', KutacaneController::class);
+    Route::auto('/user/blangkejeren', BlangkejerenController::class);
 });
