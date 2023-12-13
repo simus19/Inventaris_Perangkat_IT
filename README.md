@@ -3,7 +3,7 @@ laravel minimum 8.1
 
 open terminal
 
-type => git clone https://github.com/mfzeref17/template-auth-laravel-blade.git
+type => git clone https://github.com/simus19/Inventaris_Perangkat_IT.git
 
 type => cd template-auth-laravel-blade
 
